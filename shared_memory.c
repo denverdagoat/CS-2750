@@ -38,7 +38,6 @@ sleep(2);
 *pint = 10 * i; /* Write into the shared area. */
 printf("Parent: Written Val.: = %d\n", *pint);
 }
-// Detach the shared memory segment when done
 shmdt(pint);
 //remove shared memory
 shmctl(shmid, IPC_RMID, NULL);
